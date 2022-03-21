@@ -1,0 +1,15 @@
+const mongoose = require('mongoose');
+
+const bookSchema = new mongoose.Schema({
+    likes: Number,
+    coverImage: String,
+    content: String,
+    publicationId: String,
+    authorId: String,
+},{
+    timestamps: true,
+});
+
+const Book = mongoose.model("book",bookSchema);
+
+module.exports = Book;
